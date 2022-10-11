@@ -1,0 +1,40 @@
+.header{
+  margin-bottom: 2rem;
+}
+
+.header ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.header ul li {
+  margin-left: 1rem;
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  background: #eee;
+  padding: .5rem 1rem;
+  border-radius: 4px;
+}
+
+/*
+ Por não ser mais possivel utilizar o 'activeClassName' direto no javascript.
+ 
+ Porem ele ainda continua ativando o '.active', porem, caso queiramos usar apenas o '.active' ele não funcional.
+
+ Tendo que dizer que o 'active' é uma classe global, falando para que não mude o nome dela para criar um nome único, sendo isso que é feito por padrão.
+
+ para isso faça: :global(.active)
+*/
+
+.header :global(.active), 
+.link:hover {
+  background: #ddd;
+}

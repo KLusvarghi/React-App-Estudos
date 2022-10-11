@@ -1,0 +1,69 @@
+body {
+  margin: 2rem;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 0.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  font-size: 1.4rem;
+}
+
+
+.App {
+  max-width: 40rem;
+  margin: 0 auto;
+
+  /* 
+    Há um leve bug que quando saimos de uma página que não tem scroll para uma que tem, ele joga o conteudo um pouco para o lado. Para resolver isso, fazemos com que por padrão todas as páginas tenha um scroll */
+  /* 
+    Para isso definimos um mino me altura somando 100 view heigth (tamanho total da tela) + 10rem (160px)
+  */
+  min-height: calc(100vh + 10rem);
+  flex-direction: column;
+  display: flex;
+}
+
+
+/* 
+  E para fazer com que o footer vá lá para baixo, definimos o conteúdo central como flex: 1, fazendo com que ele ocupe tudo que der do vh
+*/
+.content {
+  flex: 1;
+}
+
+
+.animeLeft {
+  transform: translateX(-20px);
+  opacity: 0;
+  animation: animeLeft .3s forwards;
+}
+
+@keyframes animeLeft {
+  to {
+  transform: initial;
+  opacity: initial;
+  }
+}
+
+.loading {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 10px solid #ccc;
+  border-right-color: transparent;
+  animation: loading 1s infinite;
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(360deg);
+  }
+}

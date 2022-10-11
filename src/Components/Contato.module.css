@@ -1,0 +1,26 @@
+.contato {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Tamanho das colunas */
+  gap: 2rem; /* Distancia entre as colunas */
+
+}
+
+.dados {
+  padding: 0;
+  list-style: none;
+}
+
+.dados li {
+  font-size:  1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.8rem;
+}
+
+.dados li::before {
+  content: ''; /* Sempre colocar o content mesmo com nada dentro para ele criar o item */
+  display: inline-block; /* para ficar na mesma linha que o conteudo */
+  width: 15px;
+  height: 8px;
+  background: #ddd;
+  margin-right: 10px;
+}
