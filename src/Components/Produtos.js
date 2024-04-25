@@ -11,6 +11,8 @@ const Produtos = () => {
       const response = await fetch(url);
       const json = await response.json();
       setProdutos(json);
+      console.log(produtos)
+      console.log(produtos)
     };
     fetchProduto('https://ranekapi.origamid.dev/json/api/produto');
   }, []); // passando uma array vazia por que quero que ele faça apenas o fetch inical
